@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MiniJameGam.Item;
+using UnityEngine;
 
 namespace MiniJameGam.Progression
 {
@@ -18,6 +19,11 @@ namespace MiniJameGam.Progression
             if (next - 1 == _progression)
             {
                 _progression = next;
+
+                if (_progression == TutorialProgression.WaitingForMining)
+                {
+                    SpawnerManager.Instance.Spawn();
+                }
             }
         }
     }
