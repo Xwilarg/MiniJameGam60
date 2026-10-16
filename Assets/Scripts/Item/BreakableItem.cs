@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace MiniJameGam.Item
 {
+    [RequireComponent(typeof(Rigidbody), typeof(MeshCollider))]
     public class BreakableItem : MonoBehaviour
     {
         [SerializeField]
