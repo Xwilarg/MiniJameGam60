@@ -2,9 +2,7 @@
 using MiniJameGam.Player;
 using MiniJameGam.Progression;
 using MiniJameGam.SO;
-using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +29,7 @@ namespace MiniJameGam.Craft
                 _title.text = _recipe.Name;
                 CheckCanCraft();
             }
-            private get
+            get
             {
                 return _recipe;
             }
@@ -40,7 +38,6 @@ namespace MiniJameGam.Craft
         public void CheckCanCraft()
         {
             _canCraft = true;
-            if (Recipe.Output == ItemType.Tutorial_Axe && PlayerManager.Instance.IsWeaponActive) _canCraft = false;
 
             List<string> ingredients = new();
 
@@ -63,9 +60,10 @@ namespace MiniJameGam.Craft
 
         public void Craft()
         {
-            if (Recipe.Output == ItemType.Tutorial_Axe)
+            if (Recipe.Output == ItemType.Weapon)
             {
-                PlayerManager.Instance.ToggleWeapon(true);
+                var level = CraftingManager.Instance.ProgressWeaponRecipe();
+                PlayerManager.Instance.ToggleWeapon(level);
                 TutorialManager.Instance.Next(TutorialProgression.WaitingForMining);
             }
 

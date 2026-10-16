@@ -10,7 +10,10 @@ namespace MiniJameGam.Craft
         public static CraftingManager Instance { private set; get; }
 
         [SerializeField]
-        private RecipeInfo[] _recipes;
+        private List<RecipeInfo> _recipes;
+
+        [SerializeField]
+        private RecipeInfo _weaponRecipe;
 
         [SerializeField]
         private GameObject _cratingMenu, _craftingItem;
@@ -21,6 +24,8 @@ namespace MiniJameGam.Craft
         private readonly List<CraftingUI> _recipeUIs = new();
 
         public bool IsActive => _cratingMenu.activeInHierarchy;
+
+        private int _weaponLevel = -1;
 
         private void Awake()
         {
@@ -33,11 +38,30 @@ namespace MiniJameGam.Craft
         {
             foreach (var recipe in _recipes)
             {
-                var go = Instantiate(_craftingItem, _craftingContainer);
-                var cui = go.GetComponent<CraftingUI>();
-                cui.Recipe = recipe;
-                _recipeUIs.Add(cui);
+                AddRecipe(recipe, false);
             }
+            AddRecipe(_weaponRecipe, true);
+        }
+
+        private void AddRecipe(RecipeInfo recipe, bool front)
+        {
+            var go = Instantiate(_craftingItem, _craftingContainer);
+            var cui = go.GetComponent<CraftingUI>();
+            cui.Recipe = recipe;
+            if (front) _recipeUIs.Insert(0, cui);
+            else _recipeUIs.Add(cui);
+        }
+
+        public int ProgressWeaponRecipe()
+        {
+            _weaponRecipe = _weaponRecipe.NextRecipe;
+            _recipeUIs.RemoveAll(x => x.Recipe.Output == ItemType.Weapon);
+            if (_weaponRecipe != null) AddRecipe(_weaponRecipe, true);
+
+            OpenCraftingUI();
+
+            _weaponLevel++;
+            return _weaponLevel;
         }
 
         public void OpenCraftingUI()

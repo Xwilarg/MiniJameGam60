@@ -13,12 +13,14 @@ namespace MiniJameGam.SO
         public string Name;
 
         public ItemType Output;
+
+        public RecipeInfo NextRecipe;
     }
 
     public enum ItemType
     {
         Unknown,
 
-        Tutorial_Axe
+        Weapon
     }
 }

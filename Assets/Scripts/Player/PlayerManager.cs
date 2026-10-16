@@ -7,20 +7,19 @@ namespace MiniJameGam.Player
         public static PlayerManager Instance { private set; get; }
 
         [SerializeField]
-        private GameObject _weapon;
+        private GameObject[] _weapons;
 
         private void Awake()
         {
             Instance = this;
 
-            _weapon.SetActive(false);
+            foreach (var w in _weapons) w.SetActive(false);
         }
 
-        public bool IsWeaponActive => _weapon.activeInHierarchy;
-
-        public void ToggleWeapon(bool value)
+        public void ToggleWeapon(int level)
         {
-            _weapon.SetActive(value);
+            if (level != 0) _weapons[level - 1].SetActive(false);
+            _weapons[level].SetActive(true);
         }
     }
 }

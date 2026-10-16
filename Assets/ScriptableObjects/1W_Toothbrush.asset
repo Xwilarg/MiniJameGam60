@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31eb215526356ea4ab9dbbd9dab19f5d, type: 3}
-  m_Name: Axe
+  m_Name: 1W_Toothbrush
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.PlayerControlInfo
   Resources:
-  - key: 2
-    value: 2
   - key: 1
-    value: 2
-  Name: Axe
+    value: 10
+  Name: Toothbrush
   Output: 1
+  NextRecipe: {fileID: 0}
