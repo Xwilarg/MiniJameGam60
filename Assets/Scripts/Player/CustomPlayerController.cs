@@ -1,3 +1,4 @@
+using MiniJameGam.Craft;
 using MiniJameGam.Item;
 using Sketch.FPS;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace MiniJameGam.Player
                 var target = colls.OrderBy(x => Vector3.Distance(center, x.transform.position)).FirstOrDefault();
                 if (target != null)
                 {
-                    target.GetComponent<BreakableItem>().Hit(3);
+                    target.GetComponent<BreakableItem>().Hit(CraftingManager.Instance.Power);
                 }
             }
         }

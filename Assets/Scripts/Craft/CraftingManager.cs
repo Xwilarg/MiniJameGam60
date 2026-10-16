@@ -26,6 +26,7 @@ namespace MiniJameGam.Craft
         public bool IsActive => _cratingMenu.activeInHierarchy;
 
         private int _weaponLevel = -1;
+        public int Power => _weaponLevel + 1;
 
         private void Awake()
         {
