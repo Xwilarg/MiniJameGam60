@@ -1,3 +1,4 @@
+using MiniJameGam.Craft;
 using MiniJameGam.Item;
 using Sketch.FPS;
 using UnityEngine;

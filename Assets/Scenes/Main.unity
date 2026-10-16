@@ -511,7 +511,8 @@ GameObject:
   m_Component:
   - component: {fileID: 385814680}
   - component: {fileID: 385814681}
-  m_Layer: 7
+  - component: {fileID: 385814682}
+  m_Layer: 11
   m_Name: Vacuum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,8 +553,20 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &385814682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385814679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72a098715ec0384894c1dd3da59de69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Player.Vacuum
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,33 +1332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Player.PlayerManager
   _weapon: {fileID: 658233879}
---- !u!1 &1297059449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 510515300157522523, guid: 2d3b8b78db8c61843aafef47dcbfe75e, type: 3}
-  m_PrefabInstance: {fileID: 7473915500891397253}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1297059456
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297059449}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7019499404158029721, guid: 49a8ceec177dfb54c9f41e37d262c735, type: 3}
 --- !u!1 &1468209697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1678,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1840283488}
   - component: {fileID: 1840283487}
-  - component: {fileID: 1840283486}
   - component: {fileID: 1840283485}
   m_Layer: 0
   m_Name: Camera
@@ -1745,14 +1730,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &1840283486
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840283484}
-  m_Enabled: 1
 --- !u!20 &1840283487
 Camera:
   m_ObjectHideFlags: 0
@@ -2013,14 +1990,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1131527160438280772, guid: 2d3b8b78db8c61843aafef47dcbfe75e, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 510515300157522523, guid: 2d3b8b78db8c61843aafef47dcbfe75e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1297059456}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3b8b78db8c61843aafef47dcbfe75e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
