@@ -66,6 +66,8 @@ namespace MiniJameGam.Craft
             {
                 PlayerManager.Instance.ToggleWeapon(true);
             }
+
+            CheckCanCraft();
         }
     }
 }
