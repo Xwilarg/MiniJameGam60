@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466fda679b8420d44a8dc81118a2bdb6, type: 3}
+  m_Name: PlayerControlInfo
+  m_EditorClassIdentifier: xwilarg.eu.zirk.sketch.firstpersoncontroller::Sketch.FPS.PlayerControlInfo
+  MouvementSpeed: 5
+  RunningMultiplier: 1.5
+  JumpForce: 2
+  GravityMultiplier: 0.75
