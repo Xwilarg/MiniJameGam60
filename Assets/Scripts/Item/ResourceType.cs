@@ -5,6 +5,7 @@
         Paper,
         Plastic,
         Metal,
-        Food
+        Food,
+        Glass
     }
 }
