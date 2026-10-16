@@ -1157,7 +1157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 82e60a04a4070fc4ea26e3c8e125c160, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1181,6 +1181,7 @@ GameObject:
   - component: {fileID: 1284653216}
   - component: {fileID: 1284653214}
   - component: {fileID: 1284653215}
+  - component: {fileID: 1284653217}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1244,6 +1245,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3748f4d7e493bd841a1bf15de7e43843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Item.GameManager
+--- !u!114 &1284653217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284653212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b55b237d72b8a46917eb0f739236a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Player.PlayerManager
+  _weapon: {fileID: 658233879}
 --- !u!1 &1468209697
 GameObject:
   m_ObjectHideFlags: 0
