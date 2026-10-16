@@ -363,6 +363,22 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 9589e045b648cdb43a6bf093fe7410d8, type: 3}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
+      value: 8625828f-45cc-462b-8e3f-b306ea6ebf75
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
+      value: 'Sketch.FirstPersonController/Attack[/Mouse/leftButton]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -372,6 +388,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_ActionEvents.Array.data[6].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
@@ -403,6 +427,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 137297737}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMovement
       objectReference: {fileID: 0}
@@ -419,6 +451,10 @@ PrefabInstance:
       value: OnInteract
       objectReference: {fileID: 0}
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAttack
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MiniJameGam.Player.CustomPlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -433,6 +469,14 @@ PrefabInstance:
     - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MiniJameGam.Player.CustomPlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MiniJameGam.Player.CustomPlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 661079623806977242, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: m_ActionEvents.Array.data[7].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2318909568991414244, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,7 +20,7 @@ namespace MiniJameGam.Craft
         {
             if (Target != null)
             {
-                _rb.linearVelocity = (Target.position - transform.position).normalized * 5f;
+                _rb.linearVelocity = (Target.position - transform.position).normalized * 6f;
             }
         }
 
