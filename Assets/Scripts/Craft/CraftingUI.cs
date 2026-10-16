@@ -1,4 +1,5 @@
 ﻿using MiniJameGam.Item;
+using MiniJameGam.Player;
 using MiniJameGam.SO;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -38,6 +39,8 @@ namespace MiniJameGam.Craft
         public void CheckCanCraft()
         {
             _canCraft = true;
+            if (Recipe.Output == ItemType.Tutorial_Axe && PlayerManager.Instance.IsWeaponActive) _canCraft = false;
+
             List<string> ingredients = new();
 
             foreach (var res in _recipe.Resources)
@@ -59,7 +62,10 @@ namespace MiniJameGam.Craft
 
         public void Craft()
         {
-
+            if (Recipe.Output == ItemType.Tutorial_Axe)
+            {
+                PlayerManager.Instance.ToggleWeapon(true);
+            }
         }
     }
 }
