@@ -9,6 +9,9 @@ namespace MiniJameGam.Item
         [SerializeField]
         private GameObject[] _spawnables;
 
+        [SerializeField]
+        private Transform _spawnPoint;
+
         private void Awake()
         {
             Instance = this;
@@ -16,7 +19,7 @@ namespace MiniJameGam.Item
 
         public void Spawn()
         {
-
+            Instantiate(_spawnables[Random.Range(0, _spawnables.Length)], _spawnPoint.position, Random.rotation);
         }
     }
 }

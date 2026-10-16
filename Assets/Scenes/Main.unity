@@ -1443,7 +1443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fefb1601ff040fc46a3f902e1ee3fec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Item.SpawnerManager
-  _spawnables: []
+  _spawnables:
+  - {fileID: 6513962887811172703, guid: 4af5ac598135cb440ba0da4163da1789, type: 3}
+  _spawnPoint: {fileID: 1914746843}
 --- !u!114 &1284653220
 MonoBehaviour:
   m_ObjectHideFlags: 0
