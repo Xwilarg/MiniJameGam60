@@ -1,6 +1,7 @@
 ﻿using MiniJameGam.SO;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace MiniJameGam.Craft
@@ -56,7 +57,8 @@ namespace MiniJameGam.Craft
         public int ProgressWeaponRecipe()
         {
             _weaponRecipe = _weaponRecipe.NextRecipe;
-            _recipeUIs.RemoveAll(x => x.Recipe.Output == ItemType.Weapon);
+            Destroy(_recipeUIs.First().gameObject);
+            _recipeUIs.RemoveAt(0);
             if (_weaponRecipe != null) AddRecipe(_weaponRecipe, true);
 
             OpenCraftingUI();
