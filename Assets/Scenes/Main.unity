@@ -1295,6 +1295,7 @@ GameObject:
   - component: {fileID: 1284653214}
   - component: {fileID: 1284653215}
   - component: {fileID: 1284653217}
+  - component: {fileID: 1284653218}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1371,6 +1372,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Player.PlayerManager
   _weapon: {fileID: 658233879}
+--- !u!114 &1284653218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284653212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623fe29ad1e9e084d8d028cebbc68b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Progression.TutorialManager
 --- !u!1 &1468209697
 GameObject:
   m_ObjectHideFlags: 0

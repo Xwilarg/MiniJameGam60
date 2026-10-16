@@ -1,5 +1,6 @@
 ﻿using MiniJameGam.Item;
 using MiniJameGam.Player;
+using MiniJameGam.Progression;
 using MiniJameGam.SO;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -65,6 +66,7 @@ namespace MiniJameGam.Craft
             if (Recipe.Output == ItemType.Tutorial_Axe)
             {
                 PlayerManager.Instance.ToggleWeapon(true);
+                TutorialManager.Instance.Next(TutorialProgression.WaitingForMining);
             }
 
             CheckCanCraft();
