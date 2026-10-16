@@ -522,6 +522,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5265322079990475046, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+      propertyPath: near clip plane
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5281281372893146217, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
       propertyPath: m_Name
       value: Player

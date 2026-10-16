@@ -24,6 +24,10 @@ namespace MiniJameGam.Progression
                 {
                     SpawnerManager.Instance.Spawn();
                 }
+                else if (_progression == TutorialProgression.TutorialEnd)
+                {
+                    SpawnerManager.Instance.StartAutoSpawn();
+                }
             }
         }
     }

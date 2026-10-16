@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MiniJameGam.Progression;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace MiniJameGam.Item
@@ -22,6 +23,7 @@ namespace MiniJameGam.Item
                         BreakableManager.Instance.SpawnResource(r.Key, transform.position);
                     }
                 }
+                TutorialManager.Instance.Next(TutorialProgression.TutorialEnd);
                 Destroy(gameObject);
             }
         }

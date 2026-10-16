@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace MiniJameGam.Item
 {
@@ -12,14 +13,30 @@ namespace MiniJameGam.Item
         [SerializeField]
         private Transform _spawnPoint;
 
+        private const int MaxObjectCount = 5;
+
         private void Awake()
         {
             Instance = this;
         }
 
+        private IEnumerator SpawnObjects()
+        {
+            while (true)
+            {
+                Spawn();
+                yield return new WaitForSeconds(Random.Range(2f, 5f));
+            }
+        }
+
         public void Spawn()
         {
             Instantiate(_spawnables[Random.Range(0, _spawnables.Length)], _spawnPoint.position, Random.rotation);
+        }
+
+        public void StartAutoSpawn()
+        {
+            StartCoroutine(SpawnObjects());
         }
     }
 }
