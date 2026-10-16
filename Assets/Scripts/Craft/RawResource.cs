@@ -26,7 +26,7 @@ namespace MiniJameGam.Craft
 
         private void Update()
         {
-            if (Target != null && Vector3.Distance(Target.position, transform.position) < .1f)
+            if (Target != null && Vector2.Distance(new(Target.position.x, Target.position.z), new Vector2(transform.position.x, transform.position.z)) < .1f)
             {
                 ItemManager.Instance.Add(Resource, 1);
                 Destroy(gameObject);
