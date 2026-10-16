@@ -10,6 +10,8 @@ namespace MiniJameGam.SO
         [SerializeField]
         public Dictionary<ResourceType, int> Resources;
 
+        public string Name;
+
         public ItemType Output;
     }
 
