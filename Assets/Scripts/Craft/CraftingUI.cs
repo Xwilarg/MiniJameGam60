@@ -66,6 +66,10 @@ namespace MiniJameGam.Craft
                 PlayerManager.Instance.ToggleWeapon(level);
                 TutorialManager.Instance.Next(TutorialProgression.WaitingForMining);
             }
+            else if (Recipe.Output == ItemType.RocketPart)
+            {
+                RocketManager.Instance.BuildPart(Recipe);
+            }
 
             CheckCanCraft();
         }

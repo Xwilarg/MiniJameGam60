@@ -24,9 +24,9 @@ namespace MiniJameGam.Craft
             CraftingManager.Instance.AddRecipes(_parts.Select(x => x.Recipe));
         }
 
-        public void BuildPart(EntityId blueprintId)
+        public void BuildPart(RecipeInfo recipe)
         {
-            var part = _parts.First(x => x.Blueprint.GetEntityId() == blueprintId);
+            var part = _parts.First(x => x.Recipe.GetEntityId() == recipe.GetEntityId());
 
             Destroy(part.Blueprint);
             var go = Instantiate(part.Prefab, _buildingTransform);
