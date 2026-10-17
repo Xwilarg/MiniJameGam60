@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.PlayerControlInfo
   Resources:
   - key: 1
-    value: 10
+    value: 25
   Name: Toothbrush
   Output: 1
   NextRecipe: {fileID: 11400000, guid: 80ab375ddd641ec45844f668c1fa007e, type: 2}

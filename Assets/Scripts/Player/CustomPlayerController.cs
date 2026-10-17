@@ -2,7 +2,6 @@ using MiniJameGam.Craft;
 using MiniJameGam.Item;
 using Sketch.FPS;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +9,9 @@ namespace MiniJameGam.Player
 {
     public class CustomPlayerController : PlayerController
     {
+        [SerializeField]
+        private GameObject _hitEffect;
+
         private Camera _cam;
 
         protected override void Awake()
@@ -47,6 +49,12 @@ namespace MiniJameGam.Player
                 if (target != null)
                 {
                     target.GetComponent<BreakableItem>().Hit(CraftingManager.Instance.Power);
+                    Vector3 pos = target.transform.position;
+                    if (Physics.Linecast(_cam.transform.position, target.transform.position, out var hit, LayerMask.GetMask("Item")))
+                    {
+                        pos = hit.point;
+                    }
+                    Destroy(Instantiate(_hitEffect, pos, Quaternion.identity), 1f);
                 }
             }
         }

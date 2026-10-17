@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.PlayerControlInfo
   Resources:
   - key: 1
-    value: 30
+    value: 60
   - key: 2
-    value: 20
+    value: 40
   Name: Razor
   Output: 1
   NextRecipe: {fileID: 0}

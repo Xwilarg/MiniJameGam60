@@ -415,6 +415,7 @@ MonoBehaviour:
   _pInput: {fileID: 189668424}
   _triggerArea: {fileID: 807704795}
   _interactionText: {fileID: 0}
+  _hitEffect: {fileID: 9017983468783000140, guid: 2696f67024e3fd244989070ed31e77c0, type: 3}
 --- !u!4 &137297739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2318909568991414244, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}

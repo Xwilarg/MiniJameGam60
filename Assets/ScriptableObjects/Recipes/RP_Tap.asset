@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.RecipeInfo
   Resources:
   - key: 0
-    value: 10
+    value: 30
   - key: 1
     value: 20
   Name: Rocket tap

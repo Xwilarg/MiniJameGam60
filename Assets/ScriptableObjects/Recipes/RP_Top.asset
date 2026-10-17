@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.RecipeInfo
   Resources:
   - key: 0
-    value: 40
+    value: 60
   - key: 1
-    value: 20
+    value: 40
   Name: Rocket top
   Output: 2
   NextRecipe: {fileID: 0}
