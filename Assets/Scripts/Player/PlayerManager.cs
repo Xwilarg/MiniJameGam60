@@ -9,6 +9,9 @@ namespace MiniJameGam.Player
         [SerializeField]
         private GameObject[] _weapons;
 
+        [SerializeField]
+        private Animator _weaponAnim;
+
         private void Awake()
         {
             Instance = this;
@@ -20,6 +23,11 @@ namespace MiniJameGam.Player
         {
             if (level != 0) _weapons[level - 1].SetActive(false);
             _weapons[level].SetActive(true);
+        }
+
+        public void Attack()
+        {
+            _weaponAnim.SetTrigger("Swing");
         }
     }
 }

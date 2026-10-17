@@ -29,6 +29,7 @@ namespace MiniJameGam.Player
         {
             if (value.phase == InputActionPhase.Started)
             {
+                PlayerManager.Instance.Attack();
                 var center = transform.position + _cam.transform.forward;
                 var colls = Physics.OverlapSphere(center, .5f, LayerMask.GetMask("Item"));
                 var target = colls.OrderBy(x => Vector3.Distance(center, x.transform.position)).FirstOrDefault();

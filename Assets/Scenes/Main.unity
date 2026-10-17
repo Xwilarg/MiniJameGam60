@@ -1015,6 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 658233880}
+  - component: {fileID: 658233881}
   m_Layer: 0
   m_Name: AxeAnchor
   m_TagString: Untagged
@@ -1040,6 +1041,28 @@ Transform:
   - {fileID: 1614292231}
   m_Father: {fileID: 1840283488}
   m_LocalEulerAnglesHint: {x: 48.16, y: -105.924, z: 32.007}
+--- !u!95 &658233881
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658233879}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8b3c4f3ff47e864ca0b9fbd1982fcd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &659892224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,6 +1646,7 @@ MonoBehaviour:
   - {fileID: 381570967}
   - {fileID: 724070933}
   - {fileID: 1614292232}
+  _weaponAnim: {fileID: 658233881}
 --- !u!114 &1284653218
 MonoBehaviour:
   m_ObjectHideFlags: 0
