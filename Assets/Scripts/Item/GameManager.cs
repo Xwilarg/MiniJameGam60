@@ -12,6 +12,6 @@ namespace MiniJameGam.Item
             Instance = this;
         }
 
-        public bool CanMove => !CraftingManager.Instance.IsActive;
+        public bool CanMove => !CraftingManager.Instance.IsActive && !RocketManager.Instance.IsShowingEnding;
     }
 }

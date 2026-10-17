@@ -2691,6 +2691,7 @@ MonoBehaviour:
     Blueprint: {fileID: 1210969280}
     Prefab: {fileID: 919132149155446097, guid: e4edcb27c2ecd4745a24d2f316596d00, type: 3}
   _buildingTransform: {fileID: 589231833}
+  _rocketAnim: {fileID: 589231834}
 --- !u!1 &1341754957 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9756c4e5c73c04648b47efd60e2147ed, type: 3}

@@ -11,8 +11,16 @@ namespace MiniJameGam.Craft
         [SerializeField]
         private RocketPart[] _parts;
 
+        private int _partsBuilt = 0;
+
         [SerializeField]
         private Transform _buildingTransform;
+        public Transform BuildingTransform => _buildingTransform;
+
+        [SerializeField]
+        private Animator _rocketAnim;
+
+        public bool IsShowingEnding { private set; get; }
 
         private void Awake()
         {
@@ -32,6 +40,19 @@ namespace MiniJameGam.Craft
             Destroy(part.Blueprint);
             var go = Instantiate(part.Prefab, _buildingTransform);
             go.transform.localPosition = Vector3.zero;
+            _partsBuilt++;
+
+            if (_partsBuilt == _parts.Length)
+            {
+                StartRocket();
+            }
+        }
+
+        public void StartRocket()
+        {
+            CraftingManager.Instance.CloseCraftingUI();
+            IsShowingEnding = true;
+            _rocketAnim.SetTrigger("Go");
         }
     }
 

@@ -18,6 +18,16 @@ namespace MiniJameGam.Player
             _cam = Camera.main;
         }
 
+        protected override void Update()
+        {
+            base.Update();
+
+            if (RocketManager.Instance.IsShowingEnding)
+            {
+                _cam.transform.LookAt(RocketManager.Instance.BuildingTransform);
+            }
+        }
+
         public override bool IsActive => GameManager.Instance.CanMove;
 
         public override Vector2 GetCurrentInputRotation(Vector2 movInput)
