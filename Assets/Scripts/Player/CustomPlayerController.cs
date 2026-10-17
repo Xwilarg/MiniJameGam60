@@ -2,6 +2,7 @@ using MiniJameGam.Craft;
 using MiniJameGam.Item;
 using Sketch.FPS;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -46,6 +47,17 @@ namespace MiniJameGam.Player
                 if (target != null)
                 {
                     target.GetComponent<BreakableItem>().Hit(CraftingManager.Instance.Power);
+                }
+            }
+        }
+
+        public void OnCancel(InputAction.CallbackContext value)
+        {
+            if (value.phase == InputActionPhase.Started)
+            {
+                if (CraftingManager.Instance.IsActive)
+                {
+                    CraftingManager.Instance.CloseCraftingUI();
                 }
             }
         }
