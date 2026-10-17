@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: xwilarg.eu.zirk.sketch.firstpersoncontroller::Sketch.FPS.PlayerControlInfo
   MouvementSpeed: 5
   RunningMultiplier: 1.5
-  JumpForce: 2
-  GravityMultiplier: 0.75
+  JumpForce: 5
+  GravityMultiplier: 2
