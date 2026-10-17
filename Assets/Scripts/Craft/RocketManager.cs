@@ -20,6 +20,9 @@ namespace MiniJameGam.Craft
         [SerializeField]
         private Animator _rocketAnim;
 
+        [SerializeField]
+        private GameObject _thanksForPlaying;
+
         public bool IsShowingEnding { private set; get; }
 
         private void Awake()
@@ -45,6 +48,7 @@ namespace MiniJameGam.Craft
             if (_partsBuilt == _parts.Length)
             {
                 StartRocket();
+                _thanksForPlaying.SetActive(true);
             }
         }
 
