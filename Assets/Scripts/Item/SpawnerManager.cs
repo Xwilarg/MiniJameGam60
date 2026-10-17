@@ -14,6 +14,7 @@ namespace MiniJameGam.Item
         private Transform _spawnPoint;
 
         private const int MaxObjectCount = 5;
+        public int ActiveObjectCount { set; get; }
 
         private void Awake()
         {
@@ -24,7 +25,7 @@ namespace MiniJameGam.Item
         {
             while (true)
             {
-                Spawn();
+                if (ActiveObjectCount < MaxObjectCount) Spawn();
                 yield return new WaitForSeconds(Random.Range(.5f, 3f));
             }
         }
@@ -32,6 +33,7 @@ namespace MiniJameGam.Item
         public void Spawn()
         {
             Instantiate(_spawnables[Random.Range(0, _spawnables.Length)], _spawnPoint.position, Random.rotation);
+            ActiveObjectCount++;
         }
 
         public void StartAutoSpawn()

@@ -25,6 +25,7 @@ namespace MiniJameGam.Item
                     }
                 }
                 TutorialManager.Instance.Next(TutorialProgression.TutorialEnd);
+                SpawnerManager.Instance.ActiveObjectCount--;
                 Destroy(gameObject);
             }
         }
