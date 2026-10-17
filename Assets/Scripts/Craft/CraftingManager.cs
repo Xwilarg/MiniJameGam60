@@ -65,13 +65,18 @@ namespace MiniJameGam.Craft
         {
             _weaponRecipe = _weaponRecipe.NextRecipe;
             Destroy(_recipeUIs.First().gameObject);
-            _recipeUIs.RemoveAt(0);
+            _recipeUIs.RemoveAll(x => x.Recipe.Output == ItemType.Weapon);
             if (_weaponRecipe != null) AddRecipe(_weaponRecipe, true);
 
             OpenCraftingUI();
 
             _weaponLevel++;
             return _weaponLevel;
+        }
+
+        public void RemoveRecipe(EntityId id)
+        {
+            _recipeUIs.RemoveAll(x => x.Recipe.GetEntityId() == id);
         }
 
         public void OpenCraftingUI()

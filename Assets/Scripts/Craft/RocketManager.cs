@@ -28,6 +28,7 @@ namespace MiniJameGam.Craft
         {
             var part = _parts.First(x => x.Recipe.GetEntityId() == recipe.GetEntityId());
 
+            CraftingManager.Instance.RemoveRecipe(recipe.GetEntityId());
             Destroy(part.Blueprint);
             var go = Instantiate(part.Prefab, _buildingTransform);
             go.transform.localPosition = Vector3.zero;
