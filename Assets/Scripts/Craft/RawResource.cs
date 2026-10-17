@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace MiniJameGam.Craft
 {
+    [RequireComponent(typeof(Rigidbody), typeof(MeshCollider))]
     public class RawResource : MonoBehaviour
     {
         public ResourceType Resource;
