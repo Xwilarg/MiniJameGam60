@@ -27,7 +27,7 @@ namespace MiniJameGam.Player
 
         public void OnAttack(InputAction.CallbackContext value)
         {
-            if (value.phase == InputActionPhase.Started)
+            if (value.phase == InputActionPhase.Started && GameManager.Instance.CanMove)
             {
                 PlayerManager.Instance.Attack();
                 var center = transform.position + _cam.transform.forward;
