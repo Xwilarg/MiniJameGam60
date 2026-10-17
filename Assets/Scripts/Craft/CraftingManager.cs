@@ -76,7 +76,9 @@ namespace MiniJameGam.Craft
 
         public void RemoveRecipe(EntityId id)
         {
-            _recipeUIs.RemoveAll(x => x.Recipe.GetEntityId() == id);
+            var elem = _recipeUIs.FindIndex(x => x.Recipe.GetEntityId() == id);
+            Destroy(_recipeUIs[elem].gameObject);
+            _recipeUIs.RemoveAt(elem);
         }
 
         public void OpenCraftingUI()

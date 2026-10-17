@@ -25,7 +25,7 @@ namespace MiniJameGam.Item
             while (true)
             {
                 Spawn();
-                yield return new WaitForSeconds(Random.Range(2f, 5f));
+                yield return new WaitForSeconds(Random.Range(.5f, 3f));
             }
         }
 
