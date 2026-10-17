@@ -17,4 +17,4 @@ MonoBehaviour:
     value: 10
   Name: Toothbrush
   Output: 1
-  NextRecipe: {fileID: 0}
+  NextRecipe: {fileID: 11400000, guid: 80ab375ddd641ec45844f668c1fa007e, type: 2}
