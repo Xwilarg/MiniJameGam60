@@ -256,6 +256,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128757781}
   m_CullTransparentMesh: 1
+--- !u!1 &134382081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 398d2178da62e974e8f6d990336fbf65, type: 3}
+  m_PrefabInstance: {fileID: 1747088689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &137297733 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5281281372893146217, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
@@ -447,6 +452,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &198027087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cf15ec9ef032bbc489666cfc0cee2917, type: 3}
+  m_PrefabInstance: {fileID: 142660223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &266767251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -836,6 +846,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 274217318}
   m_SourcePrefab: {fileID: 100100000, guid: ddc5a7c6f584d76469c8ee20250d3a04, type: 3}
+--- !u!1 &379246171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fb89f483ed9b666498163085c5f555b2, type: 3}
+  m_PrefabInstance: {fileID: 1826433516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &381570967 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4494726bc5f34834698db43976a01fb3, type: 3}
@@ -1175,6 +1190,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1253101, y: 0.91112494, z: 1.7301371}
   m_Center: {x: -0.00025629834, y: 0.45513737, z: 0.22623467}
+--- !u!1 &507513033 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa05f8d3de72426498a164d39ab6e201, type: 3}
+  m_PrefabInstance: {fileID: 1714182908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &589231832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1449,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82e60a04a4070fc4ea26e3c8e125c160, type: 3}
   m_PrefabInstance: {fileID: 979475074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &749570113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 06d75ec8b95e52e4abac1cb524358d1b, type: 3}
+  m_PrefabInstance: {fileID: 2080490823}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &759712839
 GameObject:
@@ -1830,6 +1855,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5ad23378834ba2429221c5e54160d16, type: 3}
+--- !u!1 &1210969280 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e4edcb27c2ecd4745a24d2f316596d00, type: 3}
+  m_PrefabInstance: {fileID: 1705963444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1269143662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eb3f6a3b60bc69443a86d97fafc6f5bc, type: 3}
+  m_PrefabInstance: {fileID: 266767251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1284653212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,7 +2031,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3941664db0f2c51449c12a7f16b4b5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Craft.RocketManager
-  _parts: []
+  _parts:
+  - Recipe: {fileID: 11400000, guid: a68f822dd36641744a27432754b648a0, type: 2}
+    Blueprint: {fileID: 198027087}
+    Prefab: {fileID: 919132149155446097, guid: cf15ec9ef032bbc489666cfc0cee2917, type: 3}
+  - Recipe: {fileID: 0}
+    Blueprint: {fileID: 0}
+    Prefab: {fileID: 0}
+  - Recipe: {fileID: 11400000, guid: 82ff5306967e3d449ad82507dfc126dc, type: 2}
+    Blueprint: {fileID: 1269143662}
+    Prefab: {fileID: 0}
+  - Recipe: {fileID: 11400000, guid: 0c54355be99b77146b4e97dc5aa58ccf, type: 2}
+    Blueprint: {fileID: 134382081}
+    Prefab: {fileID: 919132149155446097, guid: 398d2178da62e974e8f6d990336fbf65, type: 3}
+  - Recipe: {fileID: 11400000, guid: de6d2950083ccd9409dae0f8665bb06c, type: 2}
+    Blueprint: {fileID: 379246171}
+    Prefab: {fileID: 919132149155446097, guid: fb89f483ed9b666498163085c5f555b2, type: 3}
+  - Recipe: {fileID: 11400000, guid: 1461d67c859bce344bf20c513d4530f7, type: 2}
+    Blueprint: {fileID: 1341754957}
+    Prefab: {fileID: 919132149155446097, guid: 9756c4e5c73c04648b47efd60e2147ed, type: 3}
+  - Recipe: {fileID: 11400000, guid: 1503e1ee5c081d145a0f862a8fb5af94, type: 2}
+    Blueprint: {fileID: 749570113}
+    Prefab: {fileID: 919132149155446097, guid: 06d75ec8b95e52e4abac1cb524358d1b, type: 3}
+  - Recipe: {fileID: 11400000, guid: d5c7468cf09efe049ae874610ac1b7fa, type: 2}
+    Blueprint: {fileID: 1210969280}
+    Prefab: {fileID: 919132149155446097, guid: e4edcb27c2ecd4745a24d2f316596d00, type: 3}
+  - Recipe: {fileID: 11400000, guid: 9c1780bcc5066594a9cc7aee68887329, type: 2}
+    Blueprint: {fileID: 507513033}
+    Prefab: {fileID: 919132149155446097, guid: fa05f8d3de72426498a164d39ab6e201, type: 3}
+  _buildingTransform: {fileID: 589231833}
+--- !u!1 &1341754957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9756c4e5c73c04648b47efd60e2147ed, type: 3}
+  m_PrefabInstance: {fileID: 497145624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468209697
 GameObject:
   m_ObjectHideFlags: 0
