@@ -21,6 +21,7 @@ namespace MiniJameGam.SO
     {
         Unknown,
 
-        Weapon
+        Weapon,
+        RocketPart
     }
 }

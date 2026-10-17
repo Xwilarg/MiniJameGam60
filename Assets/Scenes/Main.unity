@@ -1846,6 +1846,7 @@ GameObject:
   - component: {fileID: 1284653218}
   - component: {fileID: 1284653219}
   - component: {fileID: 1284653220}
+  - component: {fileID: 1284653221}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1983,6 +1984,19 @@ MonoBehaviour:
   - key: 4
     value:
     - {fileID: 8013216902409473082, guid: 2ee8de6f7a3a9b2498d3bc2025d4031c, type: 3}
+--- !u!114 &1284653221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284653212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3941664db0f2c51449c12a7f16b4b5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Craft.RocketManager
+  _parts: []
 --- !u!1 &1468209697
 GameObject:
   m_ObjectHideFlags: 0

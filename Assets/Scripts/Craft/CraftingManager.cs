@@ -44,6 +44,14 @@ namespace MiniJameGam.Craft
             AddRecipe(_weaponRecipe, true);
         }
 
+        public void AddRecipes(IEnumerable<RecipeInfo> recipes)
+        {
+            foreach (var recipe in recipes)
+            {
+                AddRecipe(recipe, false);
+            }
+        }
+
         private void AddRecipe(RecipeInfo recipe, bool front)
         {
             var go = Instantiate(_craftingItem, _craftingContainer);
