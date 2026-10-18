@@ -56,7 +56,10 @@ namespace MiniJameGam.Player
                         pos = hit.point;
                     }
                     SoundsManager.Instance.PlayHit();
-                    Destroy(Instantiate(_hitEffect, pos, Quaternion.identity), 1f);
+                    var vfx = Instantiate(_hitEffect, pos, Quaternion.identity);
+                    var mats = target.GetComponent<MeshRenderer>().materials;
+                    vfx.GetComponent<ParticleSystemRenderer>().sharedMaterial = mats[Random.Range(0, mats.Length)];
+                    Destroy(vfx, 1f);
                 }
             }
         }
