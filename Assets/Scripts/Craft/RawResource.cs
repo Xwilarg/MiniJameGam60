@@ -34,6 +34,7 @@ namespace MiniJameGam.Craft
                 SoundsManager.Instance.PlayTakeResource();
                 Destroy(gameObject);
             }
+            if (transform.position.y < -10f) Destroy(gameObject);
         }
     }
 }

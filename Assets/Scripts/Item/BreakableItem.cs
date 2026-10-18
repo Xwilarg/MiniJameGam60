@@ -29,5 +29,10 @@ namespace MiniJameGam.Item
                 Destroy(gameObject);
             }
         }
+
+        private void Update()
+        {
+            if (transform.position.y < -10f) Hit(999);
+        }
     }
 }
