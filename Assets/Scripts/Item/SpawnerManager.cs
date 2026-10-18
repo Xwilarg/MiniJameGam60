@@ -32,7 +32,10 @@ namespace MiniJameGam.Item
 
         public void Spawn()
         {
-            Instantiate(_spawnables[Random.Range(0, _spawnables.Length)], _spawnPoint.position, Random.rotation);
+            var go = Instantiate(_spawnables[Random.Range(0, _spawnables.Length)], _spawnPoint.position, Random.rotation);
+            var vel = Random.insideUnitSphere * 10f;
+            vel.y = 0f;
+            go.GetComponent<Rigidbody>().linearVelocity = vel;
             ActiveObjectCount++;
         }
 
