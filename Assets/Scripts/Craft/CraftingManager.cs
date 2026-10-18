@@ -83,6 +83,8 @@ namespace MiniJameGam.Craft
 
         public void OpenCraftingUI()
         {
+            if (RocketManager.Instance.IsShowingEnding) return;
+
             _cratingMenu.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
