@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace MiniJameGam.Item
@@ -8,6 +9,9 @@ namespace MiniJameGam.Item
         public static ItemManager Instance { private set; get; }
 
         private readonly Dictionary<ResourceType, int> _inventory = new();
+
+        [SerializeField]
+        private Dictionary<ResourceType, TMP_Text> _textUIs;
 
         private void Awake()
         {
@@ -24,11 +28,21 @@ namespace MiniJameGam.Item
             {
                 _inventory.Add(type, count);
             }
+            UpdateUI();
         }
 
         public void Remove(ResourceType type, int count)
         {
             _inventory[type] -= count;
+            UpdateUI();
+        }
+
+        private void UpdateUI()
+        {
+            foreach (var r in _textUIs)
+            {
+                r.Value.text = Count(r.Key).ToString();
+            }
         }
 
         public int Count(ResourceType type)

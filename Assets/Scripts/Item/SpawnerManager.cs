@@ -26,7 +26,7 @@ namespace MiniJameGam.Item
             while (true)
             {
                 if (ActiveObjectCount < MaxObjectCount) Spawn();
-                yield return new WaitForSeconds(Random.Range(.5f, 3f));
+                yield return new WaitForSeconds(Random.Range(.5f, 2f));
             }
         }
 
