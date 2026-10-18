@@ -1,3 +1,4 @@
+using MiniJameGam.Audio;
 using MiniJameGam.Craft;
 using MiniJameGam.Item;
 using Sketch.FPS;
@@ -54,6 +55,7 @@ namespace MiniJameGam.Player
                     {
                         pos = hit.point;
                     }
+                    SoundsManager.Instance.PlayHit();
                     Destroy(Instantiate(_hitEffect, pos, Quaternion.identity), 1f);
                 }
             }
