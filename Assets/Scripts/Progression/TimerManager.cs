@@ -10,6 +10,7 @@ namespace MiniJameGam.Progression
 
         private void Awake()
         {
+            Instance = this;
             _timerRef = Time.unscaledTime;
         }
 

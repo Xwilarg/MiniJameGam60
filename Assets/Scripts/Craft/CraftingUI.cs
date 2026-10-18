@@ -76,7 +76,7 @@ namespace MiniJameGam.Craft
                 RocketManager.Instance.BuildPart(Recipe);
             }
 
-            CheckCanCraft();
+            CraftingManager.Instance.OpenCraftingUI(); // Refresh crafting recipes
         }
     }
 }
