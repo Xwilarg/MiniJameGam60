@@ -13,7 +13,7 @@ namespace MiniJameGam.Item
         [SerializeField]
         private Transform _spawnPoint;
 
-        private const int MaxObjectCount = 5;
+        private const int MaxObjectCount = 7;
         public int ActiveObjectCount { set; get; }
 
         private void Awake()

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.SO.PlayerControlInfo
   Resources:
   - key: 1
-    value: 60
+    value: 30
   - key: 2
     value: 40
   Name: Razor
