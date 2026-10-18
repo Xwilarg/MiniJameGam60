@@ -26,6 +26,11 @@ namespace MiniJameGam.Item
             }
         }
 
+        public void Remove(ResourceType type, int count)
+        {
+            _inventory[type] -= count;
+        }
+
         public int Count(ResourceType type)
         {
             if (_inventory.TryGetValue(type, out int count)) return count;

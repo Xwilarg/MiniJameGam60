@@ -1,5 +1,8 @@
-﻿using MiniJameGam.SO;
+﻿using MiniJameGam.Progression;
+using MiniJameGam.SO;
+using System;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 namespace MiniJameGam.Craft
@@ -23,11 +26,15 @@ namespace MiniJameGam.Craft
         [SerializeField]
         private GameObject _thanksForPlaying;
 
+        [SerializeField]
+        private TMP_Text _thanksText;
+
         public bool IsShowingEnding { private set; get; }
 
         private void Awake()
         {
             Instance = this;
+            _thanksForPlaying.SetActive(false);
         }
 
         private void Start()
@@ -47,8 +54,13 @@ namespace MiniJameGam.Craft
 
             if (_partsBuilt == _parts.Length)
             {
+                var time = TimerManager.Instance.TimeElapsed;
+                var minutes = Mathf.FloorToInt(time / 60f);
+                var seconds = Mathf.FloorToInt(time % 60f);
+
                 StartRocket();
                 _thanksForPlaying.SetActive(true);
+                _thanksText.text = $"You built the rocket in {minutes} minute{(minutes > 1 ? "s" : "")} and {seconds} second{(seconds > 1 ? "s" : "")}";
             }
         }
 

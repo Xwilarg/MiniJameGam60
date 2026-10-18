@@ -60,6 +60,11 @@ namespace MiniJameGam.Craft
 
         public void Craft()
         {
+            foreach (var r in _recipe.Resources)
+            {
+                ItemManager.Instance.Remove(r.Key, r.Value);
+            }
+
             if (Recipe.Output == ItemType.Weapon)
             {
                 var level = CraftingManager.Instance.ProgressWeaponRecipe();
