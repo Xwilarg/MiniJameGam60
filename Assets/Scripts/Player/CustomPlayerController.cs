@@ -13,6 +13,9 @@ namespace MiniJameGam.Player
         [SerializeField]
         private GameObject _hitEffect;
 
+        private Vector3 _basePos;
+        private CharacterController _playerCC;
+
         private Camera _cam;
 
         protected override void Awake()
@@ -20,6 +23,8 @@ namespace MiniJameGam.Player
             base.Awake();
 
             _cam = Camera.main;
+            _playerCC = GetComponent<CharacterController>();
+            _basePos = transform.position;
         }
 
         protected override void Update()
@@ -29,6 +34,13 @@ namespace MiniJameGam.Player
             if (RocketManager.Instance.IsShowingEnding)
             {
                 _cam.transform.LookAt(RocketManager.Instance.BuildingTransform);
+            }
+
+            if (transform.position.y < -10f)
+            {
+                _playerCC.enabled = false;
+                transform.position = _basePos;
+                _playerCC.enabled = true;
             }
         }
 
