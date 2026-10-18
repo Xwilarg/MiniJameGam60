@@ -1,4 +1,5 @@
-﻿using MiniJameGam.Item;
+﻿using MiniJameGam.Audio;
+using MiniJameGam.Item;
 using UnityEngine;
 
 namespace MiniJameGam.Craft
@@ -30,6 +31,7 @@ namespace MiniJameGam.Craft
             if (Target != null && Vector2.Distance(new(Target.position.x, Target.position.z), new Vector2(transform.position.x, transform.position.z)) < .1f)
             {
                 ItemManager.Instance.Add(Resource, 1);
+                SoundsManager.Instance.PlayTakeResource();
                 Destroy(gameObject);
             }
         }
